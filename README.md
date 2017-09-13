@@ -23,10 +23,13 @@ Al programa de prueba provisto (Main), le toma sólo algunos segundos análizar 
 
 1. Haga que el método checkHost paralelize la búsqueda dentro de las N listas negras, teniendo en cuenta:
 
-	* Considerando las características del hardware (número de núcleos), se quiere manejar exactamente 8 hilos de procesamiento.
-	*  Cuando la búsqueda en paralelo consiga la evidencia de las 5 ocurrencias en las listas negras, NO se deberían hacer más búsquedas.
-	*  La nueva versión (paralelizada) NO debe tener posibles condiciones de carrera.
-	*  El comportamiento global se debe conservar. Es decir, al final se DEBE reportar el host como confiable o no confiable, y mostrar el listado con los números de las listas negras respectivas.
+* Considerando las características del hardware (número de núcleos), se quiere manejar exactamente 8 hilos de procesamiento.
+
+*  Cuando la búsqueda en paralelo consiga la evidencia de las 5 ocurrencias en las listas negras, NO se deberían hacer más búsquedas.
+
+*  La nueva versión (paralelizada) NO debe tener posibles condiciones de carrera.
+
+*  El comportamiento global se debe conservar. Es decir, al final se DEBE reportar el host como confiable o no confiable, y mostrar el listado con los números de las listas negras respectivas.
 
 
 ## Entrega
