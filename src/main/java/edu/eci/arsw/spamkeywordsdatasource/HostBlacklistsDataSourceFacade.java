@@ -16,6 +16,7 @@ import java.util.logging.Logger;
  *
  * @author hcadavid
  */
+//Thread-safe class
 public class HostBlacklistsDataSourceFacade {
  
 //NO TOCAR ESTE CODIGO!!    

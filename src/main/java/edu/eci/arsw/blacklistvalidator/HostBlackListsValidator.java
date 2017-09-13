@@ -6,6 +6,8 @@
 package edu.eci.arsw.blacklistvalidator;
 
 import edu.eci.arsw.spamkeywordsdatasource.HostBlacklistsDataSourceFacade;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  *
@@ -19,13 +21,18 @@ public class HostBlackListsValidator {
      * 
      * @param ipaddress 
      */
-    public void checkHost(String ipaddress){
+    public List<Integer> checkHost(String ipaddress){
+        
+        LinkedList<Integer> blackListOcurrences=new LinkedList<>();
+        
         int ocurrencesCount=0;
         
         HostBlacklistsDataSourceFacade skds=HostBlacklistsDataSourceFacade.getInstance();
         
         for (int i=0;i<skds.getRegisteredServersCount() && ocurrencesCount<5;i++){
             if (skds.isInBlackListServer(i, ipaddress)){
+                
+                blackListOcurrences.add(i);
                 ocurrencesCount++;
             }
         }
@@ -36,6 +43,8 @@ public class HostBlackListsValidator {
         else{
             skds.reportAsTrustworthy(ipaddress);
         }
+        
+        return blackListOcurrences;
     }
     
     
