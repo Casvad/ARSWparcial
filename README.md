@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software
 #### Parcial Primer tercio
@@ -72,3 +73,6 @@ Siga al pie de la letra estas indicaciones para la entrega de este punto. Hacer 
 
 7. IMPORTANTE!. Conserve una copia de la carpeta y del archivo .ZIP.
  
+=======
+# ARSWparcial
+>>>>>>> bffbca735b6c46023d0b1e0eb9b5093e07c14fa7
