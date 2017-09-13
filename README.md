@@ -2,7 +2,7 @@
 ### Arquitecturas de Software
 #### Parcial Primer tercio
 
-Para un software de vigilancia automática de seguridad informática se está desarrollando un componente encargado de validar las direcciones IP en varios miles de listas negras conocidas, y reportar aquellas que existan en al menos cinco de dichas listas. 
+Para un software de vigilancia automática de seguridad informática se está desarrollando un componente encargado de validar las direcciones IP en varios miles de listas negras (de host maliciosos) conocidas, y reportar aquellas que existan en al menos cinco de dichas listas. 
 
 Dicho componente está diseñado de acuerdo con el siguiente diagrama, donde:
 
@@ -29,7 +29,10 @@ Al programa de prueba provisto (Main), le toma sólo algunos segundos análizar 
 
 *  La nueva versión (paralelizada) NO debe tener posibles condiciones de carrera.
 
-*  El comportamiento global se debe conservar. Es decir, al final se DEBE reportar el host como confiable o no confiable, y mostrar el listado con los números de las listas negras respectivas.
+*  El comportamiento global se debe conservar. Es decir, al final se DEBE reportar el host como confiable o no confiable, 
+y mostrar el listado con los números de las listas negras respectivas.
+
+* Dentro del método checkHost Se debe mantener el LOG que informa, antes de retornar el resultado, el número de listas negras revisadas VS. el número de listas negras total. Se debe garantizar que dicha información sea verídica.
 
 * Se sabe que el HOST 202.24.34.55 está reportado en listas negras de una forma más dispersa, y que el host 212.24.24.55 NO está en ninguna lista negra.
 

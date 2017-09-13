@@ -8,6 +8,8 @@ package edu.eci.arsw.blacklistvalidator;
 import edu.eci.arsw.spamkeywordsdatasource.HostBlacklistsDataSourceFacade;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -35,7 +37,11 @@ public class HostBlackListsValidator {
         
         HostBlacklistsDataSourceFacade skds=HostBlacklistsDataSourceFacade.getInstance();
         
+        int checkedListsCount=0;
+        
         for (int i=0;i<skds.getRegisteredServersCount() && ocurrencesCount<BLACK_LIST_ALARM_COUNT;i++){
+            checkedListsCount++;
+            
             if (skds.isInBlackListServer(i, ipaddress)){
                 
                 blackListOcurrences.add(i);
@@ -49,10 +55,15 @@ public class HostBlackListsValidator {
         }
         else{
             skds.reportAsTrustworthy(ipaddress);
-        }
+        }                
+        
+        LOG.log(Level.INFO, "Checked Black Lists:{0} of {1}", new Object[]{checkedListsCount, skds.getRegisteredServersCount()});
         
         return blackListOcurrences;
     }
+    
+    
+    private static final Logger LOG = Logger.getLogger(HostBlackListsValidator.class.getName());
     
     
     
