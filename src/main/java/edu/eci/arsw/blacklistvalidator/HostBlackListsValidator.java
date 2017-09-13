@@ -73,9 +73,13 @@ public class HostBlackListsValidator {
     }
 
     private static final Logger LOG = Logger.getLogger(HostBlackListsValidator.class.getName());
-
+    
+    
+    /**
+     * agrega un elemento a la lista
+     * @param elem el elemento a agregar
+     */
     public static synchronized void agregarElemento(int elem) {
-        checkedListsCount.addAndGet(1);
         blackListOcurrences.add(elem);
         if (blackListOcurrences.size() >= BLACK_LIST_ALARM_COUNT) {
             yaTermine = true;
@@ -85,7 +89,18 @@ public class HostBlackListsValidator {
             }
         }
     }
-
+    
+    /**
+     * aumenta la cuenta de las listas que ya ha revisado
+     */
+    public static void agregarElementoRevisado(){
+        checkedListsCount.addAndGet(1);
+    }
+    
+    /**
+     * Revisa si es el ultimo hilo (sin contar el principal)
+     * @return true, si es el ultimo hilo vivo, false de lo contrario
+     */
     static synchronized boolean soyElUltimo() {
         if(hilosVivos.addAndGet(-1)==0){
             yaTermine = true;

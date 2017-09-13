@@ -30,6 +30,7 @@ public class SecurityThread extends Thread{
         HostBlacklistsDataSourceFacade skds=HostBlacklistsDataSourceFacade.getInstance();
         
         for (int i = limI; i < limS && !HostBlackListsValidator.isYaTermine(); i++) {
+            HostBlackListsValidator.agregarElementoRevisado();
           if(skds.isInBlackListServer(i, ipaddress)){
               
               HostBlackListsValidator.agregarElemento(i);//agrega Elemento a lista
