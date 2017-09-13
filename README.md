@@ -44,32 +44,31 @@ Siga al pie de la letra estas indicaciones para la entrega de este punto. Hacer 
 1. Limpie el proyecto
 
 	```bash
-$ mvn clean
-```
+	$ mvn clean
+	```
 
-1. Configure su usuario de GIT
-
-	```bash
-$ git config --global user.name "Juan Perez"
-$ git config --global user.email juan.perez@escuelaing.edu.co
-```
-
-2. Desde el directorio raíz (donde está este archivo README.md), haga commit de lo realizado.
+2. Configure su usuario de GIT
 
 	```bash
-$ git add .
-$ git commit -m "entrega parcial - Juan Perez"
-```
+	$ git config --global user.name "Juan Perez"
+	$ git config --global user.email juan.perez@escuelaing.edu.co
+	```
 
-
-3. Desde este mismo directorio, comprima todo con: (no olvide el punto al final en la segunda instrucción)
+3. Desde el directorio raíz (donde está este archivo README.md), haga commit de lo realizado.
 
 	```bash
-$ zip -r APELLIDO.NOMBRE.zip .
-```
-4. Abra el archivo ZIP creado, y rectifique que contenga lo desarrollado.
+	$ git add .
+	$ git commit -m "entrega parcial - Juan Perez"
+	```
 
-4. Suba el archivo antes creado (APELLIDO.NOMBRE.zip) en el espacio de moodle correspondiente.
+4. Desde este mismo directorio, comprima todo con: (no olvide el punto al final en la segunda instrucción)
 
-5. IMPORTANTE!. Conserve una copia de la carpeta y del archivo .ZIP.
+	```bash
+	$ zip -r APELLIDO.NOMBRE.zip .
+	```
+5. Abra el archivo ZIP creado, y rectifique que contenga lo desarrollado (incluyendo la carpeta .git).
+
+6. Suba el archivo antes creado (APELLIDO.NOMBRE.zip) en el espacio de moodle correspondiente.
+
+7. IMPORTANTE!. Conserve una copia de la carpeta y del archivo .ZIP.
  
