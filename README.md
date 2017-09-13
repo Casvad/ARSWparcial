@@ -31,6 +31,8 @@ Al programa de prueba provisto (Main), le toma sólo algunos segundos análizar 
 
 *  El comportamiento global se debe conservar. Es decir, al final se DEBE reportar el host como confiable o no confiable, y mostrar el listado con los números de las listas negras respectivas.
 
+* Se sabe que el HOST 202.24.34.55 está reportado en listas negras de una forma más dispersa, y que el host 212.24.24.55 NO está en ninguna lista negra.
+
 
 ## Entrega
 
